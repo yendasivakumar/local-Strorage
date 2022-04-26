@@ -1,0 +1,45 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, auto);
+  width: 98%;
+  margin: auto;
+  gap: 20px;
+  font-family: Open Sans, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
+  margin-top: 50px;
+}
+#container > div {
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding-bottom: 20px;
+}
+
+div > img:first-child {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+div > img + h3 {
+  font-size: 25px;
+  margin-top: 10px;
+  color: rgb(63, 61, 61);
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+h3 + p {
+  font-size: 18px;
+  color: gray;
+  margin-top: -22px;
+}
+p + img {
+  width: 45%;
+  display: block;
+  margin: auto;
+  margin-top: -15px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="backend.css" />
+    <title>Local Storage</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="nav">
+      <div><a href="navbar.html">Navbar</a></div>
+      <div><a href="backend.html">BACKEND</a></div>
+      <div><a href="frontend.html">FRONTEND</a></div>
+    </div>
+
+    <form action="" id="form">
+      <input type="text" name="" id="imgUrl" placeholder="Enter img Url" />
+      <input type="text" id="name" placeholder="Enter name here" />
+      <input type="text" name="" id="role" placeholder="Enter role" />
+      <input type="text" name="" id="compImg" placeholder="Company img Url" />
+      <input type="submit" name="" id="sub" />
+    </form>
+  </body>
+</html>
+
+<script>
+  document.querySelector("#form").addEventListener("submit", collectData);
+
+  var dataArray = JSON.parse(localStorage.getItem("InvestorsArr")) || [];
+
+  function collectData() {
+    event.preventDefault();
+    var data = {
+      avatar: form.imgUrl.value,
+      name: form.name.value,
+      role: form.role.value,
+      compImg: form.compImg.value,
+    };
+
+    dataArray.push(data);
+    localStorage.setItem("InvestorsArr", JSON.stringify(dataArray));
+  }
+</script>
